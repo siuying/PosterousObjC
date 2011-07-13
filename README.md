@@ -21,23 +21,23 @@ libz.1.2.3.dylib
 
 1. Import PosterousClient.h in the header class of the controller that will use this library.
 
-'''#import "PosterousClient.h"
+```#import "PosterousClient.h"```
 
 3. Create an instance of PosterousClient within your method
 
 GetAUsersPrimarySite example code
 //Note: You will need to set EMAIL, PASSWORD, APITOKEN (located at the top of the PosterousClient.h) to your Posterous email, password, and apitoken before using this library in your project.
 
-'''PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+```PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD
-																  apitoken:APITOKEN]; 
+																  apitoken:APITOKEN];```
 	
     
 4. Call a Posterous Client method within the same method you created an instance of PosterousClient:
 
 GetAUsersPrimarySite example code
 
-'''GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
+```GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
 {
     if (error) 
     {
@@ -47,12 +47,12 @@ GetAUsersPrimarySite example code
     {    
         Site *result = site;
         
-'''NSString *siteString = [NSString stringWithFormat:@"id: %@\n name: %@\n is_private: %@\n full_hostname: %@\n posts_url: %@\n posts_count: %@\n comment_persmission: %@",
+NSString *siteString = [NSString stringWithFormat:@"id: %@\n name: %@\n is_private: %@\n full_hostname: %@\n posts_url: %@\n posts_count: %@\n comment_persmission: %@",
                                    result._id,result.name,
                                    result.is_private,result.full_hostname,result.posts_url,
                                    result.posts_count, result.comment_permission];
         
-        NSLog(@"site: %@",siteString);
+NSLog(@"site: %@",siteString);````
     }
 };
 
