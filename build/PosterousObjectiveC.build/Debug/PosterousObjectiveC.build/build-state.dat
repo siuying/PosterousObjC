@@ -1,0 +1,63 @@
+TPosterousObjectiveC
+v7
+r1
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app
+t2
+s0
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/Info.plist
+t2
+s0
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/Resources/en.lproj/MainWindow.nib
+t2
+s0
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/Resources/en.lproj/PosterousObjectiveCViewController.nib
+t2
+s0
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/en.lproj/InfoPlist.strings
+c000000004C5C47280000000000000066
+t1281115944
+s102
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/en.lproj/MainWindow.xib
+c000000004C5C47290000000000004EB9
+t1281115945
+s20153
+
+N/Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/en.lproj/PosterousObjectiveCViewController.xib
+c000000004C5C47290000000000001A75
+t1281115945
+s6773
+
+NPosterousObjectiveC-Info.plist
+c000000004C5C4728000000000000055F
+t1281115944
+s1375
+
+CCompileXIB /Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/en.lproj/MainWindow.xib
+r0
+
+CCompileXIB /Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/en.lproj/PosterousObjectiveCViewController.xib
+r0
+
+CCopyStringsFile /Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/Resources/en.lproj/InfoPlist.strings en.lproj/InfoPlist.strings
+r0
+
+CProcessInfoPlistFile /Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app/Contents/Info.plist PosterousObjectiveC-Info.plist
+r0
+
+CTouch /Users/Grenon/Documents/FreelanceWork/PosterousObjectiveC/build/Debug/PosterousObjectiveC.app
+r0
+
