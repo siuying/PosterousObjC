@@ -37,9 +37,9 @@
 	}	
     
     if ([[[listOfMethods allValues] objectAtIndex:indexPath.row] isEqualToString:@"1"]) 
-         cell.imageView.image = [UIImage imageNamed:@"Greendot.png"];
+         cell.imageView.image = [UIImage imageNamed:@"greendot.png"];
     else
-        cell.imageView.image = [UIImage imageNamed:@"Reddot.png"];
+        cell.imageView.image = [UIImage imageNamed:@"reddot.png"];
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     cell.textLabel.font = [UIFont fontWithName:@"Georgia" size:20];
