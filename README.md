@@ -25,16 +25,12 @@ An Objective-C Library(with examples) for the Posterous 2.0 API
 
 2. Create an instance of PosterousClient within your method
 
-GetAUsersPrimarySite example code
 Note: You will need to set EMAIL, PASSWORD, APITOKEN (located at the top of the PosterousClient.h) to your Posterous email, password, and apitoken before using this library in your project.
-    
     PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD
 																  apitoken:APITOKEN];
 	
 3. Call a Posterous Client method within the same method you created an instance of PosterousClient
-
-GetAUsersPrimarySite example code
 
     GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
     {
