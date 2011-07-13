@@ -32,7 +32,7 @@ Note: You will need to set EMAIL, PASSWORD, APITOKEN (located at the top of the 
 																  password:PASSWORD
 																  apitoken:APITOKEN];
 	
-3. Call a Posterous Client method within the same method you created an instance of PosterousClient:
+3. Call a Posterous Client method within the same method you created an instance of PosterousClient
 
 GetAUsersPrimarySite example code
 
