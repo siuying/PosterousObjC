@@ -52,9 +52,9 @@ NSString *siteString = [NSString stringWithFormat:@"id: %@\n name: %@\n is_priva
                                    result.is_private,result.full_hostname,result.posts_url,
                                    result.posts_count, result.comment_permission];
         
-NSLog(@"site: %@",siteString);````
+NSLog(@"site: %@",siteString);
     }
 };
 
 PosterousRequest *request = [PosterousRequest alloc];
-[client GetAUsersPrimarySite:request completionBlock:complete];
+[client GetAUsersPrimarySite:request completionBlock:complete];```
