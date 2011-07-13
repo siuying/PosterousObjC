@@ -25,7 +25,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[listOfMethods allValues] count];
+	return [listOfMethods count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,7 +36,9 @@
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier] autorelease];
 	}	
     
-    if ([[[listOfMethods allValues] objectAtIndex:indexPath.row] isEqualToString:@"1"]) 
+    NSMutableDictionary *currentDictionary = [listOfMethods objectAtIndex:indexPath.row];
+    
+    if ([[[currentDictionary allKeys] objectAtIndex:0] isEqualToString:@"1"]) 
          cell.imageView.image = [UIImage imageNamed:@"greendot.png"];
     else
         cell.imageView.image = [UIImage imageNamed:@"reddot.png"];
@@ -44,13 +46,14 @@
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     cell.textLabel.font = [UIFont fontWithName:@"Georgia" size:20];
     cell.textLabel.adjustsFontSizeToFitWidth = YES;
-	cell.textLabel.text = [[listOfMethods allKeys]objectAtIndex:indexPath.row];
+	cell.textLabel.text = [[currentDictionary allValues]objectAtIndex:0];
 	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	NSString *methodCall = [[listOfMethods allKeys] objectAtIndex:indexPath.row];
+    NSMutableDictionary *currentDictionary = [listOfMethods objectAtIndex:indexPath.row];
+	NSString *methodCall = [[currentDictionary allValues] objectAtIndex:0];
 	     
     NSString *className = [methodCall stringByAppendingString:@"Controller"];
     
@@ -85,34 +88,36 @@
     self.navigationController.navigationBar.tintColor  = [UIColor colorWithDigitalColorMeterString:@"22.0	18.4	14.9"];
     
     self.tableOfMethods.backgroundColor = [UIColor colorWithDigitalColorMeterString:@"82.4	78.8	74.9"];
-	listOfMethods = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"1",@"GetAUsersSites",@"1",@"GetASingleSite",
-         @"1",@"GetASingleSite",
-         @"1",@"GetAUsersPrimarySite",
-         @"0",@"CreateASite",
-         @"0",@"DeleteASite",
-         @"0",@"GetASitesSubcribers",
-         @"0",@"SubscribeToASite",
-         @"0",@"UnsubscribeToASite",
-         @"1",@"GetAUser",
-         @"0",@"GetAUsersSubscribedSites",
-         @"0",@"GetPublicPostsFromPrimarySite",
-         @"0",@"GetPublicPostsFromSiteByHostname",
-         @"0",@"GetPublicPostsFromASiteOrID",
-         @"0",@"GetPublicPostsFromAnotherUser",
-         @"0",@"GetAllPostsForASite",
-         @"0",@"CreateAPost",
-         @"0",@"UpdateAPost",
-         @"0",@"DeleteAPost",
-         @"1",@"GetAllPages",
-         @"0",@"GetASinglePage",
-         @"0",@"CreateAPage",
-         @"0",@"UpdateAPage",
-         @"0",@"GetAllCommentsForAPost",
-         @"0",@"CreateAComment",
-         @"0",@"DeleteAComment",
-         @"0",@"GetASitesTheme",
-         @"0",@"UploadPhoto",
-         @"0",@"GetPostByShortCode",nil];
+    
+    self.listOfMethods = [[NSMutableArray alloc] initWithObjects:
+                          [NSMutableDictionary dictionaryWithObject:@"GetAUsersSites" forKey:@"1"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetASingleSite" forKey:@"1"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetAUsersPrimarySite" forKey:@"1"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetAUser" forKey:@"1"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetAllPages" forKey:@"1"],
+                          [NSMutableDictionary dictionaryWithObject:@"CreateASite" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"DeleteASite" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetASitesSubcribers" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"SubscribeToASite" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"UnsubscribeToASite" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetAUsersSubscribedSites" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetPublicPostsFromPrimarySite" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetPublicPostsFromSiteByHostname" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetPublicPostsFromASiteOrID" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetPublicPostsFromAnotherUser" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetAllPostsForASite" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"CreateAPost" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"UpdateAPost" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"DeleteAPost" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetASinglePage" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"CreateAPage" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"UpdateAPage" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetAllCommentsForAPost" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"CreateAComment" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"DeleteAComment" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetASitesTheme" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"UploadPhoto" forKey:@"0"],
+                          [NSMutableDictionary dictionaryWithObject:@"GetPostByShortCode" forKey:@"0"],nil];
 }
 
 /*

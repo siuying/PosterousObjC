@@ -481,20 +481,6 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/Helper Classes/LoginModalController.m"
-         timestampString = "332243604.044594"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Classes/Helper Classes/LoginModalController.m"
          timestampString = "332243475.686088"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"

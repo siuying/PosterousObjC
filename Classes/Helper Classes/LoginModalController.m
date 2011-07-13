@@ -70,6 +70,13 @@
         txtPassword.text = [credentials objectForKey:@"password"];
         [txtApiToken setText:[credentials objectForKey:@"apitoken"]];
     }
+    
+    if ([txtApiToken.text isEqualToString:@""]) 
+    {
+        txtApiToken.text = @"ApiToken";
+        txtApiToken.textColor = [UIColor lightGrayColor];
+        txtApiToken.font = [UIFont fontWithName:@"Georgia" size:12];
+    }
 }
 
 - (void)touchesEnded: (NSSet *)touches withEvent: (UIEvent *)event {

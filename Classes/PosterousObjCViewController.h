@@ -11,13 +11,13 @@
 
 @interface PosterousObjCViewController : UIViewController<UITableViewDelegate, UITextFieldDelegate> {
 	
-	NSMutableDictionary	*listOfMethods;
+	NSMutableArray	*listOfMethods;
 	IBOutlet UITableView *tableOfMethods;
     UIBarButtonItem *barLogin;
 
 }
 
-@property(nonatomic, retain) NSMutableDictionary *listOfMethods;
+@property(nonatomic, retain) NSMutableArray *listOfMethods;
 @property(nonatomic, retain) IBOutlet UITableView *tableOfMethods;
 @property(nonatomic, retain) UIBarButtonItem *barLogin;
 
