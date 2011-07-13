@@ -35,9 +35,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
         
-    PosterousClient *client = [[PosterousClient alloc] initWithCredentials:[Preferences getEmail]
-																  password:[Preferences getPassword]
-																  apitoken:[Preferences getAPIToken]]; 
+    PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+																  password:PASSWORD
+																  apitoken:APITOKEN]; 
     
     GetAllPagesCompletionBlock complete = ^(NSMutableArray *pages, NSError *error)
     {

@@ -39,8 +39,10 @@
 
 -(IBAction)Save
 {    
-    NSMutableDictionary *credentials = [NSMutableDictionary dictionaryWithObjectsAndKeys:txtEmail.text,@"email",txtPassword.text,@"password",txtApiToken.text,@"apitoken", nil];//[prefs objectForKey:@"credentials"];
+    NSMutableDictionary *credentials = [NSMutableDictionary dictionaryWithObjectsAndKeys:txtEmail.text,@"email",txtPassword.text,@"password",txtApiToken.text,@"apitoken", nil];
+    
     [[NSUserDefaults standardUserDefaults] setObject:credentials forKey:@"credentials"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -62,11 +64,11 @@
     
     NSMutableDictionary *credentials = [[NSUserDefaults standardUserDefaults] objectForKey:@"credentials"];
     
-    if (credentials != nil) 
+    if (credentials) 
     {
         txtEmail.text = [credentials objectForKey:@"email"];
         txtPassword.text = [credentials objectForKey:@"password"];
-        txtApiToken.text = [credentials objectForKey:@"apitoken"];
+        [txtApiToken setText:[credentials objectForKey:@"apitoken"]];
     }
 }
 

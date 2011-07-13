@@ -18,9 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:[Preferences getEmail]
-																  password:[Preferences getPassword]
-																  apitoken:[Preferences getAPIToken]];	 
+	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+																  password:PASSWORD
+																  apitoken:APITOKEN];	 
 	GetAUsersSitesCompletionBlock complete = ^(NSMutableArray *response, NSError *error)
     {
         if (error) 

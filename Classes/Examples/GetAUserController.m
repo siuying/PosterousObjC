@@ -33,9 +33,9 @@
      name:@"GetAUser"
      object:nil ];
     
-	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:[Preferences getEmail]
-																  password:[Preferences getPassword] 
-																  apitoken:[Preferences getAPIToken]]; 
+	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+																  password:PASSWORD 
+																  apitoken:APITOKEN]; 
 	
     GetAUserCompletionBlock complete = ^(User *user, NSError *error)
     {

@@ -1,8 +1,8 @@
-Adding PosterousObjectiveC to your project:
+How to use PosterousObjC in your project:
 
-1. Download PosterousObjectiveC source to your computer
+1. Download PosterousObjC source to your computer
 
-2. Locate folder "PosterousAPI" under "PosterousObjectiveC/Classes". Drag and drop it into your project. A dialog will appear -- make sure "Copy items" is checked, "Recursively create groups for any added folders" radio button is selected, "Reference Type" is "Default" before clicking "Add".
+2. Locate folder "PosterousClient" under "PosterousObjC/Classes". Drag and drop it into your project. A dialog will appear -- make sure "Copy items" is checked, "Recursively create groups for any added folders" radio button is selected, "Reference Type" is "Default" before clicking "Add".
 
 3. Right click on the "Frameworks" group in your project and select Add > Existing Frameworks. Then locate the following frameworks and add them to the project (if they do not already exist in your application):
 - CFNetwork
@@ -11,13 +11,8 @@ Adding PosterousObjectiveC to your project:
 - CoreGraphics
 - libz.1.2.3.dylib
 
-4. IMPORTANT: Go to the PosterousAPI/Helper Classes/Constants.m file and add your Posterous username and password to the Username and Password constants.
 
-NSString * const Username = @"your posterous username";
-NSString * const Password = @"your posterous password";
-
-
-Calling PosterousObjectiveC methods in your project:
+Calling PosterousObjC methods in your project:
 
 1. Import PosterousClient.h in the header class of the controller that will use this library.
 
@@ -25,16 +20,35 @@ Calling PosterousObjectiveC methods in your project:
 
 3. Create an instance of PosterousClient within your method
 
-//example code here
+//GetAUsersPrimarySite example code
+//Note: You will need to set EMAIL, PASSWORD, APITOKEN (located at the top of the PosterousClient.h) to your Posterous email, password, and apitoken before using this library in your project.
 
+PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+																  password:PASSWORD
+																  apitoken:APITOKEN]; 
+	
+    
 4. Call a Posterous Client method within the same method you created an instance of PosterousClient:
 
-//example code here
+//GetAUsersPrimarySite code here
+GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
+{
+    if (error) 
+    {
+        NSLog(@"GetASingleSite error: %@", [error userInfo]);
+    } 
+    else
+    {    
+        Site *result = site;
+        
+        NSString *siteString = [NSString stringWithFormat:@"id: %@\n name: %@\n is_private: %@\n full_hostname: %@\n posts_url: %@\n posts_count: %@\n comment_persmission: %@",
+                                   result._id,result.name,
+                                   result.is_private,result.full_hostname,result.posts_url,
+                                   result.posts_count, result.comment_permission];
+        
+        NSLog(@"site: %@",siteString);
+    }
+};
 
-(All calls are asynchronous)
-
-5. Add the response type you will be retrieving in the header class of the controller that will use this library
-
-//example code here
-
-//example code and instructions on how to use completion blocks
+PosterousRequest *request = [PosterousRequest alloc];
+[client GetAUsersPrimarySite:request completionBlock:complete];

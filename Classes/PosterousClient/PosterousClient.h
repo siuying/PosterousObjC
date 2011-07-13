@@ -23,6 +23,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#define EMAIL [Preferences getEmail]
+#define PASSWORD [Preferences getPassword]
+#define APITOKEN [Preferences getAPIToken]
+
 #import <Foundation/Foundation.h>
 #import "PosterousRequest.h"
 #import "Site.h"

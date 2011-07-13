@@ -76,7 +76,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="558029163">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="1049997929">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">graybutton.png</string>
 						</object>
@@ -87,6 +87,7 @@
 						<string key="NSFrame">{{180, 403}, {120, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -97,7 +98,7 @@
 						<reference key="IBUIHighlightedTitleColor" ref="648538616"/>
 						<reference key="IBUINormalTitleColor" ref="532277614"/>
 						<reference key="IBUINormalTitleShadowColor" ref="79834918"/>
-						<reference key="IBUINormalBackgroundImage" ref="558029163"/>
+						<reference key="IBUINormalBackgroundImage" ref="1049997929"/>
 					</object>
 					<object class="IBUITextField" id="1051670393">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -137,6 +138,7 @@
 						<string key="NSFrame">{{20, 125}, {280, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="114206183"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -282,6 +284,22 @@
 					</object>
 					<int key="connectionID">24</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">txtApiToken</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="114206183"/>
+					</object>
+					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="114206183"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -401,7 +419,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">24</int>
+			<int key="maxID">26</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
