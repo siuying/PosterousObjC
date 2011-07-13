@@ -10,18 +10,18 @@ An Objective-C Library(with examples) for the Posterous 2.0 API
 2. Locate folder "PosterousClient" under "PosterousObjC/Classes". Drag and drop it into your project. A dialog will appear -- make sure "Copy items" is checked, "Recursively create groups for any added folders" radio button is selected, "Reference Type" is "Default" before clicking "Add".
 
 3. Right click on the "Frameworks" group in your project and select Add > Existing Frameworks. Then locate the following frameworks and add them to the project (if they do not already exist in your application)
-- CFNetwork
-- SystemConfiguration
-- MobileCoreServices
-- CoreGraphics
-- libz.1.2.3.dylib
+CFNetwork
+SystemConfiguration
+MobileCoreServices
+CoreGraphics
+libz.1.2.3.dylib
 
 
 #Calling PosterousObjC methods in your project:
 
 1. Import PosterousClient.h in the header class of the controller that will use this library.
 
-#import "PosterousClient.h"
+import "PosterousClient.h"
 
 3. Create an instance of PosterousClient within your method
 
