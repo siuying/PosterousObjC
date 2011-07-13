@@ -37,24 +37,24 @@ GetAUsersPrimarySite example code
 
 GetAUsersPrimarySite example code
 
-```GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
-{
-    if (error) 
+    GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
     {
-        NSLog(@"GetASingleSite error: %@", [error userInfo]);
-    } 
-    else
-    {    
-        Site *result = site;
+        if (error) 
+        {
+            NSLog(@"GetASingleSite error: %@", [error userInfo]);
+        } 
+        else
+        {    
+            Site *result = site;
         
-NSString *siteString = [NSString stringWithFormat:@"id: %@\n name: %@\n is_private: %@\n full_hostname: %@\n posts_url: %@\n posts_count: %@\n comment_persmission: %@",
+    NSString *siteString = [NSString stringWithFormat:@"id: %@\n name: %@\n is_private: %@\n full_hostname: %@\n posts_url: %@\n posts_count: %@\n comment_persmission: %@",
                                    result._id,result.name,
                                    result.is_private,result.full_hostname,result.posts_url,
                                    result.posts_count, result.comment_permission];
         
-NSLog(@"site: %@",siteString);
-    }
-};
+    NSLog(@"site: %@",siteString);
+        }
+    };
 
-PosterousRequest *request = [PosterousRequest alloc];
-[client GetAUsersPrimarySite:request completionBlock:complete];```
+    PosterousRequest *request = [PosterousRequest alloc];
+    [client GetAUsersPrimarySite:request completionBlock:complete];
