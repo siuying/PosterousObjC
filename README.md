@@ -21,7 +21,7 @@ An Objective-C Library(with examples) for the Posterous 2.0 API
 
 1. Import PosterousClient.h in the header class of the controller that will use this library.
 
-    #import "PosterousClient.h"
+import "PosterousClient.h"
 
 2. Create an instance of PosterousClient within your method
 
@@ -31,7 +31,7 @@ Note: You will need to set EMAIL, PASSWORD, APITOKEN (located at the top of the 
 
     PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD
-																  apitoken:APITOKEN];```
+																  apitoken:APITOKEN];
 	
     
 3. Call a Posterous Client method within the same method you created an instance of PosterousClient:
