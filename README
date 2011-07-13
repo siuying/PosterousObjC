@@ -30,7 +30,7 @@ PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
     
 4. Call a Posterous Client method within the same method you created an instance of PosterousClient:
 
-//GetAUsersPrimarySite code here
+//GetAUsersPrimarySite example code
 GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
 {
     if (error) 
