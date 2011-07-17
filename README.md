@@ -1,4 +1,4 @@
-## PosterousObjC ##
+## PosterousObjC - Status: Ongoing##
 An Objective-C Library(with examples) for the Posterous 2.0 API
 
 <img src="https://github.com/joshgrenon/PosterousObjC/raw/master/screenshot.png" alt="screenshot" />
