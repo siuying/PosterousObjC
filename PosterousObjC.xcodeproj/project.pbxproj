@@ -490,7 +490,8 @@
 		48EF4211120C7EA800B2E49F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = MotionMobs;
+				LastUpgradeCheck = 0410;
+				ORGANIZATIONNAME = "Josh Grenon";
 			};
 			buildConfigurationList = 48EF4214120C7EA800B2E49F /* Build configuration list for PBXProject "PosterousObjC" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -622,8 +623,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PREBINDING = NO;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -636,7 +636,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
