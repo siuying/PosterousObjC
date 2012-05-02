@@ -39,9 +39,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+	__block PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD
-																  apitoken:APITOKEN];	 
+																  apitoken:APITOKEN] autorelease];	 
 	GetAUsersSitesCompletionBlock complete = ^(NSMutableArray *response, NSError *error)
     {
         if (error) 
@@ -53,7 +53,7 @@
         {
             NSMutableArray *sites = response;
             
-            NSMutableString *output = [[NSMutableString alloc] init];
+            NSMutableString *output = [[[NSMutableString alloc] init] autorelease];
             
             for (int i = 0; i < [sites count];i++) {
                 
@@ -71,7 +71,7 @@
         }
     };
     
-    PosterousRequest *request = [PosterousRequest alloc];
+    PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
     [client GetAUsersSites:request completionBlock:complete];
 }
 

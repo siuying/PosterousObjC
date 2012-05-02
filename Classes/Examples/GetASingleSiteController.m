@@ -43,9 +43,9 @@
 
 -(IBAction)getSingleSite
 {    
-	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL 
+	__block PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL 
 																  password:PASSWORD
-																  apitoken:APITOKEN]; 
+																  apitoken:APITOKEN] autorelease]; 
 	
     GetASingleSiteCompletionBlock complete = ^(Site *site, NSError *error)
     {
@@ -67,7 +67,7 @@
         }
     };    
     
-	PosterousRequest *request = [PosterousRequest alloc];
+	PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
 	request._id = inputField.text;
     
 	[client GetASingleSite: request completionBlock:complete];	

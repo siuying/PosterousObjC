@@ -78,7 +78,7 @@
 	     
     NSString *className = [methodCall stringByAppendingString:@"Controller"];
     
-    UIViewController *controller = [[NSClassFromString(className) alloc] initWithNibName:methodCall bundle:nil];
+    UIViewController *controller = [[[NSClassFromString(className) alloc] initWithNibName:methodCall bundle:nil] autorelease];
     
     [self.navigationController pushViewController:controller animated:YES];
     [tableOfMethods deselectRowAtIndexPath:indexPath animated:YES];
@@ -86,7 +86,7 @@
 
 -(void)showLoginModal
 {
-    LoginModalController *loginModalController = [[LoginModalController alloc] initWithNibName:@"LoginModalController" bundle:nil];     
+    LoginModalController *loginModalController = [[[LoginModalController alloc] initWithNibName:@"LoginModalController" bundle:nil] autorelease];     
     loginModalController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self.navigationController presentModalViewController:loginModalController animated:YES];
 }
@@ -104,13 +104,13 @@
         [self performSelector:@selector(showLoginModal) withObject:nil afterDelay:0.1];
     }
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Credentials" style:UIBarButtonItemStyleBordered target:self action:@selector(showLoginModal)];
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Credentials" style:UIBarButtonItemStyleBordered target:self action:@selector(showLoginModal)] autorelease];
     
     self.navigationController.navigationBar.tintColor  = [UIColor colorWithDigitalColorMeterString:@"22.0	18.4	14.9"];
     
     self.tableOfMethods.backgroundColor = [UIColor colorWithDigitalColorMeterString:@"82.4	78.8	74.9"];
     
-    self.listOfMethods = [[NSMutableArray alloc] initWithObjects:
+    self.listOfMethods = [[[NSMutableArray alloc] initWithObjects:
                           [NSMutableDictionary dictionaryWithObject:@"GetAUsersSites" forKey:@"1"],
                           [NSMutableDictionary dictionaryWithObject:@"GetASingleSite" forKey:@"1"],
                           [NSMutableDictionary dictionaryWithObject:@"GetAUsersPrimarySite" forKey:@"1"],
@@ -138,7 +138,7 @@
                           [NSMutableDictionary dictionaryWithObject:@"DeleteAComment" forKey:@"0"],
                           [NSMutableDictionary dictionaryWithObject:@"GetASitesTheme" forKey:@"0"],
                           [NSMutableDictionary dictionaryWithObject:@"UploadPhoto" forKey:@"0"],
-                          [NSMutableDictionary dictionaryWithObject:@"GetPostByShortCode" forKey:@"0"],nil];
+                          [NSMutableDictionary dictionaryWithObject:@"GetPostByShortCode" forKey:@"0"],nil] autorelease];
 }
 
 /*

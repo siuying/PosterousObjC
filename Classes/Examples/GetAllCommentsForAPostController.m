@@ -64,9 +64,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+    PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD
-																  apitoken:APITOKEN]; 
+																  apitoken:APITOKEN] autorelease]; 
     
     GetAllCommentsForAPostBlock complete = ^(NSMutableArray *comments, NSError *error)
     {
@@ -77,7 +77,7 @@
         } 
         else
         {    
-            NSMutableString *output = [[NSMutableString alloc] init];
+            NSMutableString *output = [[[NSMutableString alloc] init] autorelease];
             
             //for (Page *page in comments) 
             //{  
@@ -89,7 +89,7 @@
     };    
     
 	
-	PosterousRequest *request = [PosterousRequest alloc];
+	PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
 	[client GetAllCommentsForAPost:request completionBlock:complete];	
 }
 

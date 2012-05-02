@@ -55,9 +55,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
         
-    PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
-																  password:PASSWORD
-																  apitoken:APITOKEN]; 
+    PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL
+                                                                   password:PASSWORD
+                                                                   apitoken:APITOKEN] autorelease]; 
     
     GetAllPagesCompletionBlock complete = ^(NSMutableArray *pages, NSError *error)
     {
@@ -68,7 +68,7 @@
         } 
         else
         {    
-            NSMutableString *output = [[NSMutableString alloc] init];
+            NSMutableString *output = [[[NSMutableString alloc] init] autorelease];
             
             for (Page *page in pages) 
             {  
@@ -80,7 +80,7 @@
     };    
 
 	
-	PosterousRequest *request = [PosterousRequest alloc];
+	PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
 	[client GetAllPages:request completionBlock:complete];	
 }
 

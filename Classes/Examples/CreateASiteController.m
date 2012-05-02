@@ -43,11 +43,11 @@
      name:@"CreateASite"
      object:nil ];
     
-	PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
-																  password:PASSWORD
-																  apitoken:APITOKEN]; 
+	PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL
+                                                                   password:PASSWORD
+                                                                   apitoken:APITOKEN] autorelease]; 
 	
-	PosterousRequest *request = [PosterousRequest alloc];
+	PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
 	[client CreateASite:request];	
 }
 

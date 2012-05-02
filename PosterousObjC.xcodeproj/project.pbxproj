@@ -395,7 +395,6 @@
 		48EF420F120C7EA800B2E49F = {
 			isa = PBXGroup;
 			children = (
-				54F0F4711551338F0026A06F /* libz.1.dylib */,
 				48EF4216120C7EA800B2E49F /* Classes */,
 				48EF4217120C7EA800B2E49F /* Other Sources */,
 				48EF4218120C7EA800B2E49F /* Resources */,
@@ -445,6 +444,7 @@
 		48EF4219120C7EA800B2E49F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54F0F4711551338F0026A06F /* libz.1.dylib */,
 				48EF4221120C7EA800B2E49F /* UIKit.framework */,
 				48EF4223120C7EA800B2E49F /* Foundation.framework */,
 				48EF4225120C7EA800B2E49F /* CoreGraphics.framework */,

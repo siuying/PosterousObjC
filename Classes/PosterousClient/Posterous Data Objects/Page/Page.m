@@ -64,7 +64,7 @@
 
 -(NSString *)description
 {
-    NSMutableString *output = [[NSMutableString alloc] init];
+    NSMutableString *output = [[[NSMutableString alloc] init] autorelease];
     
     [output appendFormat:@"slug: %@\n",self.slug];
     [output appendFormat:@"full_url: %@\n",self.full_url];

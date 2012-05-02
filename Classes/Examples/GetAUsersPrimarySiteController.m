@@ -45,9 +45,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 		
-	PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+	PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD
-																  apitoken:APITOKEN]; 
+																  apitoken:APITOKEN] autorelease]; 
 	
     GetAUsersPrimarySiteCompletionBlock complete = ^(Site *site, NSError *error)
     {
@@ -69,7 +69,7 @@
         }
     };
     
-	PosterousRequest *request = [PosterousRequest alloc];
+	PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
 	[client GetAUsersPrimarySite:request completionBlock:complete];	
 }
 

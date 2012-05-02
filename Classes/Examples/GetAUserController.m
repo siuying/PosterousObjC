@@ -54,9 +54,9 @@
      name:@"GetAUser"
      object:nil ];
     
-	__block PosterousClient *client = [[PosterousClient alloc] initWithCredentials:EMAIL
+	__block PosterousClient *client = [[[PosterousClient alloc] initWithCredentials:EMAIL
 																  password:PASSWORD 
-																  apitoken:APITOKEN]; 
+																  apitoken:APITOKEN] autorelease]; 
 	
     GetAUserCompletionBlock complete = ^(User *user, NSError *error)
     {
@@ -74,7 +74,7 @@
         }
     };        
     
-	PosterousRequest *request = [PosterousRequest alloc];
+	PosterousRequest *request = [[[PosterousRequest alloc] init] autorelease];
 	request._id = inputField.text;
 	[client GetAUser:request completionBlock:complete];	
 }

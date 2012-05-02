@@ -101,7 +101,7 @@
         {
             for (NSDictionary *node in resultsDictionary) 
             {                
-                Site *site = [Site alloc];
+                Site *site = [[[Site alloc] init] autorelease];
                 site._id =  [[node objectForKey:@"id"] stringValue];
                 site.name = [node objectForKey:@"name"];
                 site.full_hostname = [node objectForKey:@"full_hostname"]; 
@@ -131,7 +131,7 @@
     getASingleSiteCompletionBlock = [completion copy];  
     
 	//NSString * const Sites_GetSingleSite = @"http://posterous.com/api/2/users/me/sites/"
-	NSMutableString *apiURL = [[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/me/sites/"];
+	NSMutableString *apiURL = [[[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/me/sites/"] autorelease];
     	
 	if (requestObject._id != nil) 
 	{
@@ -165,7 +165,7 @@
         
         if(resultsDictionary != nil)
         {					
-            Site *site = [Site alloc];
+            Site *site = [[[Site alloc] init] autorelease];
             site._id =  [[resultsDictionary objectForKey:@"id"] stringValue];
             site.name = [resultsDictionary objectForKey:@"name"];
             site.full_hostname = [resultsDictionary objectForKey:@"full_hostname"]; 
@@ -214,7 +214,7 @@
         
         if(resultsDictionary != nil)
         {					
-            Site *site = [Site alloc];
+            Site *site = [[[Site alloc] init] autorelease];
             site._id =  [[resultsDictionary objectForKey:@"id"] stringValue];
             site.name = [resultsDictionary objectForKey:@"name"];
             site.full_hostname = [resultsDictionary objectForKey:@"full_hostname"]; 
@@ -329,7 +329,7 @@
 -(void)GetAUser:(PosterousRequest *) requestObject completionBlock: (GetAUserCompletionBlock)completion
 {	
     getAUserCompletionBlock = [completion copy];
-	NSMutableString *apiURL = [[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/"];
+	NSMutableString *apiURL = [[[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/"] autorelease];
 	
 	if (requestObject._id != nil) 
 	{
@@ -356,7 +356,7 @@
         
         if(resultsDictionary != nil)
         {				
-            User *user = [User alloc];
+            User *user = [[[User alloc] init] autorelease];
             user.last_activity = [resultsDictionary objectForKey:@"last_activity"];
             user.nickname = [resultsDictionary objectForKey:@"nickname"];
             user.lastname = [resultsDictionary objectForKey:@"lastname"];
@@ -440,7 +440,7 @@
 -(void)GetAllPages:(PosterousRequest *) requestObject completionBlock: (GetAllPagesCompletionBlock)completion
 {
     getAllPagesCompletionBlock = [completion copy];    
-    NSMutableString *apiURL = [[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/me/sites/914165/pages"];
+    NSMutableString *apiURL = [[[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/me/sites/914165/pages"] autorelease];
     
     NSString *urlWithAPIToken = [apiURL stringByAppendingFormat:@"?api_token=%@",_apitoken];
 	
@@ -456,7 +456,7 @@
         NSData *responseData = [request responseData];
         NSMutableArray *pages = [NSMutableArray array];
         
-        NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]; 
+        NSString *responseString = [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]; 
         NSLog(@"GetAllPages data: %@",responseString);
                 
         NSError *error1 = nil;
@@ -468,7 +468,7 @@
         {	            
             for (NSDictionary *node in results) 
             {        
-               Page *page = [[Page alloc] init:node];
+               Page *page = [[[Page alloc] init:node] autorelease];
                [pages addObject:page];	
             }
             
@@ -514,7 +514,7 @@
 	//NSString *const Comments_GetAllCommentsForAPost = @"http://posterous.com/api/2/users/me/sites/primary/posts/1/comments";
     getAllCommentsForAPostBlock = [completion copy];  
     
-	NSMutableString *apiURL = [[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/me/sites/primary/posts/58975206/comments"];
+	NSMutableString *apiURL = [[[NSMutableString alloc] initWithString: @"http://posterous.com/api/2/users/me/sites/primary/posts/58975206/comments"] autorelease];
     
 //	if (requestObject._id != nil) 
 //	{
@@ -541,7 +541,7 @@
         
         NSData *responseData = [request responseData];
         
-        NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]; 
+        NSString *responseString = [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]; 
         NSLog(@"GetAllCommentsForAPost data: %@",responseString);
         
         NSError *error1 = nil;
