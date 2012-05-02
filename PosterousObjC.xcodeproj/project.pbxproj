@@ -10,7 +10,6 @@
 		4850DFC7120CC4BC009DB561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4850DFC6120CC4BC009DB561 /* SystemConfiguration.framework */; };
 		4850DFCD120CC4D3009DB561 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4850DFCC120CC4D3009DB561 /* MobileCoreServices.framework */; };
 		48743C03120CC29B00B1C728 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48743C02120CC29B00B1C728 /* CFNetwork.framework */; };
-		48743C07120CC2D500B1C728 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48743C06120CC2D500B1C728 /* libz.1.2.3.dylib */; };
 		48743C09120CC2EA00B1C728 /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48743C08120CC2EA00B1C728 /* libobjc.A.dylib */; };
 		48CD3CB913CD9B67001C4353 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CD3C7913CD9B67001C4353 /* ASIAuthenticationDialog.m */; };
 		48CD3CBA13CD9B67001C4353 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CD3C7C13CD9B67001C4353 /* ASIDataCompressor.m */; };
@@ -68,13 +67,13 @@
 		48EF4233120C7EA900B2E49F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EF4231120C7EA900B2E49F /* MainWindow.xib */; };
 		48EF4236120C7EA900B2E49F /* PosterousObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EF4235120C7EA900B2E49F /* PosterousObjCViewController.m */; };
 		48EF4239120C7EA900B2E49F /* PosterousObjCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EF4237120C7EA900B2E49F /* PosterousObjCViewController.xib */; };
+		54F0F4721551338F0026A06F /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F0F4711551338F0026A06F /* libz.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4850DFC6120CC4BC009DB561 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4850DFCC120CC4D3009DB561 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		48743C02120CC29B00B1C728 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		48743C06120CC2D500B1C728 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		48743C08120CC2EA00B1C728 /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
 		48CD3C7813CD9B67001C4353 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		48CD3C7913CD9B67001C4353 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -178,6 +177,7 @@
 		48EF4234120C7EA900B2E49F /* PosterousObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterousObjCViewController.h; sourceTree = "<group>"; };
 		48EF4235120C7EA900B2E49F /* PosterousObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterousObjCViewController.m; sourceTree = "<group>"; };
 		48EF4238120C7EA900B2E49F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PosterousObjCViewController.xib; sourceTree = "<group>"; };
+		54F0F4711551338F0026A06F /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = usr/lib/libz.1.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,11 +185,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F0F4721551338F0026A06F /* libz.1.dylib in Frameworks */,
 				48EF4222120C7EA800B2E49F /* UIKit.framework in Frameworks */,
 				48EF4224120C7EA800B2E49F /* Foundation.framework in Frameworks */,
 				48EF4226120C7EA800B2E49F /* CoreGraphics.framework in Frameworks */,
 				48743C03120CC29B00B1C728 /* CFNetwork.framework in Frameworks */,
-				48743C07120CC2D500B1C728 /* libz.1.2.3.dylib in Frameworks */,
 				48743C09120CC2EA00B1C728 /* libobjc.A.dylib in Frameworks */,
 				4850DFC7120CC4BC009DB561 /* SystemConfiguration.framework in Frameworks */,
 				4850DFCD120CC4D3009DB561 /* MobileCoreServices.framework in Frameworks */,
@@ -395,6 +395,7 @@
 		48EF420F120C7EA800B2E49F = {
 			isa = PBXGroup;
 			children = (
+				54F0F4711551338F0026A06F /* libz.1.dylib */,
 				48EF4216120C7EA800B2E49F /* Classes */,
 				48EF4217120C7EA800B2E49F /* Other Sources */,
 				48EF4218120C7EA800B2E49F /* Resources */,
@@ -448,7 +449,6 @@
 				48EF4223120C7EA800B2E49F /* Foundation.framework */,
 				48EF4225120C7EA800B2E49F /* CoreGraphics.framework */,
 				48743C02120CC29B00B1C728 /* CFNetwork.framework */,
-				48743C06120CC2D500B1C728 /* libz.1.2.3.dylib */,
 				48743C08120CC2EA00B1C728 /* libobjc.A.dylib */,
 				4850DFC6120CC4BC009DB561 /* SystemConfiguration.framework */,
 				4850DFCC120CC4D3009DB561 /* MobileCoreServices.framework */,
@@ -490,7 +490,7 @@
 		48EF4211120C7EA800B2E49F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Josh Grenon";
 			};
 			buildConfigurationList = 48EF4214120C7EA800B2E49F /* Build configuration list for PBXProject "PosterousObjC" */;
