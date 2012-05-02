@@ -37,7 +37,7 @@
 #import "Page.h"
 #import "User.h"
 
-typedef void (^GetAUsersSitesCompletionBlock)(NSMutableArray *posterousClient, 
+typedef void (^GetAUsersSitesCompletionBlock)(NSMutableArray *sites, 
                                              NSError *error);
 typedef void (^GetASingleSiteCompletionBlock)(Site *site,NSError *error);
 typedef void (^GetAUsersPrimarySiteCompletionBlock)(Site *site,NSError *error);

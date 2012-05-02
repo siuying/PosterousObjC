@@ -116,7 +116,8 @@
 	}];
 	[request setFailedBlock:^{
 		NSError *error = [request error];
-		NSLog(@"error: %@", [error userInfo]);
+        if (self.getAUsersSitesCompletionBlock) 
+            self.getAUsersSitesCompletionBlock(nil, error);
 	}];
 	[request startAsynchronous];
 }
@@ -175,7 +176,8 @@
 	}];
 	[request setFailedBlock:^{
 		NSError *error = [request error];
-		NSLog(@"error: %@", [error userInfo]);
+        if (self.getASingleSiteCompletionBlock) 
+            self.getASingleSiteCompletionBlock(nil, error);
 	}];
 	[request startAsynchronous];	
 }
@@ -221,7 +223,8 @@
 	}];
 	[request setFailedBlock:^{
 		NSError *error = [request error];
-		NSLog(@"error: %@", [error userInfo]);
+        if (self.getAUsersPrimarySiteCompletionBlock) 
+            self.getAUsersPrimarySiteCompletionBlock(nil, error);
 	}];
 	[request startAsynchronous];
 }
@@ -359,7 +362,8 @@
 	}];
 	[request setFailedBlock:^{
 		NSError *error = [request error];
-		NSLog(@"error: %@", [error userInfo]);
+        if (self.getAUserCompletionBlock) 
+            self.getAUserCompletionBlock(nil, error);
 	}];
 	[request startAsynchronous];
 }
@@ -464,7 +468,8 @@
 	}];
 	[request setFailedBlock:^{
 		NSError *error = [request error];
-		NSLog(@"error: %@", [error userInfo]);
+        if (self.getAllPagesCompletionBlock) 
+            self.getAllPagesCompletionBlock(nil, error);
 	}];
 	[request startAsynchronous];
 }
@@ -550,7 +555,9 @@
 	}];
 	[request setFailedBlock:^{
 		NSError *error = [request error];
-		NSLog(@"error: %@", [error userInfo]);
+        if (self.getAllCommentsForAPostBlock) 
+            self.getAllCommentsForAPostBlock(nil, error);
+
 	}];
 	[request startAsynchronous];
 }
