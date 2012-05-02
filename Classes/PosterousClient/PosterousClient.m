@@ -84,7 +84,9 @@
 	 
 	__block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setUsername:_username];
-    [request setPassword:_password]; 
+    [request setPassword:_password];
+    [request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+    [request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request setCompletionBlock:^{        
         
         NSData *responseData = [request responseData];        
@@ -149,7 +151,9 @@
     
     __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setUsername:_username];
-    [request setPassword:_password]; 
+    [request setPassword:_password];
+    [request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+    [request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request setCompletionBlock:^{        
         
         NSData *responseData = [request responseData];
@@ -196,7 +200,9 @@
 	
     __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setUsername:_username];
-    [request setPassword:_password]; 
+    [request setPassword:_password];
+    [request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+    [request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request setCompletionBlock:^{        
         
         NSData *responseData = [request responseData];
@@ -336,7 +342,9 @@
 	
     __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setUsername:_username];
-    [request setPassword:_password]; 
+    [request setPassword:_password];
+    [request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+    [request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request setCompletionBlock:^{        
         
         NSData *responseData = [request responseData];
@@ -440,7 +448,9 @@
 	
     __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setUsername:_username];
-    [request setPassword:_password]; 
+    [request setPassword:_password];
+    [request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+    [request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request setCompletionBlock:^{        
         
         NSData *responseData = [request responseData];
@@ -524,7 +534,9 @@
     
     __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setUsername:_username];
-    [request setPassword:_password]; 
+    [request setPassword:_password];
+    [request setAuthenticationScheme:(NSString *)kCFHTTPAuthenticationSchemeBasic];
+    [request setShouldPresentCredentialsBeforeChallenge:YES];
 	[request setCompletionBlock:^{        
         
         NSData *responseData = [request responseData];
